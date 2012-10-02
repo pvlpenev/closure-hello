@@ -1,0 +1,17 @@
+{namespace closure-hello.view}
+
+{template main}
+  <html>
+    <head>
+      <title>{$title}</title>
+    </head>
+    <body>
+      {$body | noAutoescape}
+    </body>
+  </html>
+  
+{/template}
+
+{template hello-world}
+  <h1>Hello World</h1>
+{/template}
