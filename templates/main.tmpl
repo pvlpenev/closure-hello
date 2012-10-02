@@ -6,6 +6,13 @@
       <title>{$title}</title>
     </head>
     <body>
+      {if $main}
+	<a href="/todos">Todos</a>
+      {elseif $todos}
+	<a href="/">Home</a>
+      {else}
+	<h1>Where am i?</h1>
+      {/if}
       {$body | noAutoescape}
     </body>
   </html>
@@ -23,4 +30,12 @@
       <li>{$task}</li>
     {/foreach}
   </ul>
+{/template}
+
+{template test}
+  {if $page}
+    "Hello"
+  {else}
+  "WTF"
+  {/if}
 {/template}
